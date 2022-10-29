@@ -241,8 +241,9 @@ body {
   body {
     overflow-x: hidden;
   }
+
   .header {
-    margin-inline: 16.5rem;
+    margin-inline: 8rem;
   }
 
   .heading {
@@ -254,27 +255,30 @@ body {
   }
 
   .section-hero {
-    margin-inline: 16.5rem;
+    margin-inline: 8rem;
   }
 
   .hero {
     column-gap: $gap-hero-desktop;
 
+    &__text-box P {
+      width: 70%;
+    }
+
     &__img {
-      transform: translate(-6%, -33%);
+      max-width: 90rem;
     }
   }
 
-  .paragraph {
-    font-size: $bodyM;
-    line-height: 1.5;
-  }
-
   .section-about {
-    margin-inline: 16.5rem;
+    margin-inline: 8rem;
   }
 
   .about {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: $gap-row-desktop;
+    column-gap: $gap-column-desktop;
+
     &__courses {
       padding: 6.4rem 3.2rem 0 3.2rem;
     }
@@ -286,29 +290,31 @@ body {
   }
 
   .footer {
-    margin-top: 14rem;
-    padding: 3.2rem 16.5rem;
+    padding-inline: 8rem;
   }
 }
 
 //1440PX - Desktop
 @media screen and (min-width: 90em) {
+  .header {
+    margin-inline: 16.5rem;
+  }
+
   .logo {
     width: 11.4rem;
   }
 
   .heading {
-    font-size: $headingXL;
     line-height: 1.26;
     margin-bottom: 2.9rem;
     &-secondary {
-      font-size: $headingM;
       margin-bottom: 2.4rem;
     }
   }
 
   .section-hero {
     margin-top: 9.9rem;
+    margin-inline: 16.5rem;
   }
 
   .hero {
@@ -317,12 +323,11 @@ body {
     column-gap: $gap-hero-desktop;
 
     &__text-box P {
-      padding-right: 2.3rem;
+      width: 100%;
+      padding-right: 2.7rem;
     }
 
     &__img {
-      position: absolute;
-      max-width: 90rem;
       transform: translate(3%, -44%);
     }
   }
@@ -338,16 +343,17 @@ body {
     }
   }
 
+  .paragraph {
+    font-size: $bodyM;
+    line-height: 1.5;
+  }
+
   .section-about {
     margin-top: 9.9rem;
+    margin-inline: 16.5rem;
   }
 
   .about {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: $gap-row-desktop;
-    column-gap: $gap-column-desktop;
-
     &__courses {
       border-radius: 1.5rem;
     }
