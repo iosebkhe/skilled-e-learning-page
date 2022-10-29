@@ -1,0 +1,14 @@
+{
+  "name": "skilled-e-learning-page",
+  "version": "1.0.0",
+  "description": "Skilled e-learning landing page coding challenge",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch main.scss style.css"
+  },
+  "author": "Ioseb",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}

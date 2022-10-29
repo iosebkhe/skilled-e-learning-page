@@ -1,0 +1,340 @@
+@font-face {
+  font-family: "plusJakarta";
+  src: url("/fonts/PlusjakartaSans-medium.woff2") format("woff2"), url("/fonts/PlusjakartaSans-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "plusJakarta";
+  src: url("/fonts/PlusjakartaSans-bold.woff2") format("woff2"), url("/fonts/PlusjakartaSans-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "plusJakarta";
+  src: url("/fonts/PlusjakartaSans-extraBold.woff2") format("woff2"), url("/fonts/PlusjakartaSans-extraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "plusJakarta", sans-serif;
+  font-weight: 500;
+  background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
+  color: #83869a;
+}
+
+.logo {
+  width: 8.9rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: 1.6rem;
+  margin-top: 1.6rem;
+}
+
+.heading {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #13183f;
+  line-height: 1.25;
+  margin-bottom: 2.6rem;
+}
+.heading-secondary {
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
+}
+
+.section-hero {
+  margin: 3.8rem 1.6rem 0 1.6rem;
+}
+
+.hero {
+  display: grid;
+  gap: 4.9rem;
+}
+.hero__text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero__img {
+  max-width: 100%;
+}
+
+.btn {
+  border: none;
+  background: none;
+  border-radius: 2.8rem;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #ffffff;
+  transition: all 200ms linear;
+  position: relative;
+  padding: 1.1rem 2.4rem;
+  cursor: pointer;
+}
+.btn--header {
+  background-color: #13183f;
+  z-index: 1;
+}
+.btn--header:hover {
+  background-color: #666ca3;
+}
+.btn--hero {
+  background-image: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+  padding: 1.5rem 3.7rem;
+  margin-top: 2.4rem;
+}
+.btn--hero::before {
+  content: "";
+  position: absolute;
+  color: #ffffff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 200ms linear;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+}
+.btn--about {
+  font-size: 1.8rem;
+  color: #f74780;
+  margin-block: 2.4rem 3.2rem;
+  border-radius: 0;
+  padding: 0;
+}
+.btn--about:hover {
+  color: #ffa7c3;
+}
+.btn--footer {
+  background-image: linear-gradient(180deg, #4851ff 0%, #f02aa6 100%);
+  position: relative;
+}
+.btn--footer::before {
+  content: "";
+  position: absolute;
+  color: #ffffff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 200ms linear;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+}
+.btn:hover::before {
+  opacity: 0.5;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  line-height: 1.625;
+}
+
+.section-about {
+  margin: 0rem 1.6rem;
+}
+
+.about {
+  display: grid;
+  row-gap: 4rem;
+}
+.about__courses {
+  background-image: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+  border-radius: 1rem;
+  padding: 2.4rem 2.8rem 3.2rem 2.8rem;
+}
+.about__heading {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #ffffff;
+}
+.about__icon-box {
+  transform: translateY(-50%);
+}
+
+.item {
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+  padding: 0 2.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer {
+  background-color: #13183f;
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.6rem 1.6rem;
+}
+
+@media screen and (min-width: 48em) {
+  .header {
+    margin-inline: 3.9rem;
+    margin-top: 2.4rem;
+  }
+  .section-hero {
+    margin: 9.9rem 3.9rem 0 3.9rem;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+  }
+  .hero__img {
+    position: absolute;
+    transform: translate(-13%, -38%);
+  }
+  .section-about {
+    margin: 20.4rem 3.9rem 0 3.9rem;
+  }
+  .about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 5.6rem;
+    column-gap: 1.1rem;
+  }
+  .about__courses {
+    padding: 5.6rem 3.2rem 0 3.2rem;
+  }
+  .about__heading {
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+  .item {
+    padding: 0 3.2rem;
+  }
+  .footer {
+    margin-top: 8.6rem;
+    padding: 3.9rem 3.6rem;
+  }
+}
+@media screen and (min-width: 75em) {
+  body {
+    overflow-x: hidden;
+  }
+  .header {
+    margin-inline: 16.5rem;
+  }
+  .heading {
+    font-size: 5.6rem;
+  }
+  .heading-secondary {
+    font-size: 2.4rem;
+  }
+  .section-hero {
+    margin-inline: 16.5rem;
+  }
+  .hero {
+    column-gap: 16.2rem;
+  }
+  .hero__img {
+    transform: translate(-6%, -33%);
+  }
+  .paragraph {
+    font-size: 1.8rem;
+    line-height: 1.5;
+  }
+  .section-about {
+    margin-inline: 16.5rem;
+  }
+  .about__courses {
+    padding: 6.4rem 3.2rem 0 3.2rem;
+  }
+  .about__heading {
+    font-size: 3.2rem;
+    line-height: 1.25;
+  }
+  .footer {
+    margin-top: 14rem;
+    padding: 3.2rem 16.5rem;
+  }
+}
+@media screen and (min-width: 90em) {
+  .logo {
+    width: 11.4rem;
+  }
+  .heading {
+    font-size: 5.6rem;
+    line-height: 1.26;
+    margin-bottom: 2.9rem;
+  }
+  .heading-secondary {
+    font-size: 3.2rem;
+    margin-bottom: 2.4rem;
+  }
+  .section-hero {
+    margin-top: 9.9rem;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16.2rem;
+  }
+  .hero__text-box P {
+    padding-right: 2.3rem;
+  }
+  .hero__img {
+    position: absolute;
+    max-width: 90rem;
+    transform: translate(3%, -44%);
+  }
+  .btn {
+    padding: 1.4rem 3.2rem;
+  }
+  .btn--hero {
+    margin-top: 4rem;
+  }
+  .btn--about {
+    margin-block: 2.4rem 4rem;
+    padding: 0;
+  }
+  .section-about {
+    margin-top: 9.9rem;
+  }
+  .about {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 8rem;
+    column-gap: 3rem;
+  }
+  .about__courses {
+    border-radius: 1.5rem;
+  }
+  .item {
+    border-radius: 1.5rem;
+  }
+  .footer {
+    margin-top: 14rem;
+    padding: 3.2rem 16.5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,42 @@
+//////////colors
+$blue-dark: #13183f;
+$blue-light: #4751ff;
+$blue-chetwode: #666ca3;
+$gray: #83869a;
+$pink-dark: #f74780;
+$pink-light: #ffa7c3;
+$orange-light: #ff6f48;
+$purple: #f02aa6;
+$white: #ffffff;
+$white-ghost: #f0f1ff;
+
+//////////gradients
+$orange-pink-gradient: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+$blue-purple-gradient: linear-gradient(180deg, #4851ff 0%, #f02aa6 100%);
+$gradient-hover: linear-gradient(
+  0deg,
+  rgba(255, 255, 255, 0.5),
+  rgba(255, 255, 255, 0.5)
+);
+$gradient-angle: 180deg;
+
+//////////fonts related
+$weight-normal: 500;
+$weight-bold: 700;
+$weight-extrabold: 800;
+$headingXL: 5.6rem;
+$headingL: 4rem;
+$headingM: 3.2rem;
+$headingS: 2.4rem;
+$headingXS: 2rem;
+$bodyM: 1.8rem;
+$bodyS: 1.6rem;
+
+//////////grid gaps for different devices
+$gap-hero-desktop: 16.2rem;
+$gap-hero-mobile: 4.6rem;
+$gap-row-mobile: 4rem;
+$gap-row-tablet: 5.6rem;
+$gap-column-tablet: 1.1rem;
+$gap-row-desktop: 8rem;
+$gap-column-desktop: 3rem;
