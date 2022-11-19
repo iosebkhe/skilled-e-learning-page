@@ -6,7 +6,7 @@ This is a solution to the Skilled E-Learning Webpage challenge from Bitcamp.
 
 - Live Site URL: [Click here](https://elearn-iosebkhe.netlify.app/)
 
-###
+### Created with
 
 - Semantic HTML5 markup
 - SCSS
