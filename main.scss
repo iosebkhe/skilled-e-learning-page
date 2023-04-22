@@ -1,5 +1,6 @@
 @use "./variables" as *;
 @use "./fonts" as *;
+@use "./media-queries" as *;
 
 * {
   margin: 0;
@@ -23,6 +24,9 @@ body {
   font-weight: $weight-normal;
   background: linear-gradient($gradient-angle, $white 0%, $white-ghost 100%);
   color: $gray;
+
+  @include respond-to(dekstopSM) {
+  }
 }
 
 .logo {
@@ -123,6 +127,7 @@ body {
   &--footer {
     background-image: $blue-purple-gradient;
     position: relative;
+    overflow: hidden;
 
     &::before {
       @include before;
@@ -185,7 +190,11 @@ body {
 }
 
 //768PX - Tablet
-@media screen and (min-width: 48em) {
+@include respond-to(tablet) {
+  body {
+    overflow-x: hidden;
+  }
+
   .header {
     margin-inline: 3.9rem;
     margin-top: 2.4rem;
@@ -199,9 +208,14 @@ body {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
 
+    &__img-box {
+      overflow: hidden;
+    }
+
     &__img {
       position: absolute;
       transform: translate(-13%, -38%);
+      overflow: hidden;
     }
   }
 
@@ -237,7 +251,7 @@ body {
 }
 
 //1200px - Desktop
-@media screen and (min-width: 75em) {
+@include respond-to(desktopSM) {
   body {
     overflow-x: hidden;
   }
@@ -295,7 +309,7 @@ body {
 }
 
 //1440PX - Desktop
-@media screen and (min-width: 90em) {
+@include respond-to(desktopLG) {
   .header {
     margin-inline: 16.5rem;
   }
